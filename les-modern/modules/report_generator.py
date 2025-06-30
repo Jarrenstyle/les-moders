@@ -234,7 +234,7 @@ class ReportGenerator:
     
     def generate_markdown_report(self, system_info, exploits):
         """Markdown formatında rapor oluştur"""
-        md_template = """# 🛡️ LES-Modern Güvenlik Raporu
+        md_template = """#  LES-Modern Güvenlik Raporu
 
 > **Linux Exploit Suggester 2025** - Modern Güvenlik Analiz Raporu  
 > **Oluşturulma:** {{ report_time }}  
@@ -242,7 +242,7 @@ class ReportGenerator:
 
 ---
 
-## 📊 Sistem Özeti
+##  Sistem Özeti
 
 | Özellik | Değer |
 |---------|-------|
@@ -254,29 +254,29 @@ class ReportGenerator:
 
 ---
 
-## 🔍 Sistem Detayları
+##  Sistem Detayları
 
-### 🔧 Kernel Bilgileri
+###  Kernel Bilgileri
 - **Release:** `{{ system_info.kernel.release }}`
 - **Version:** `{{ system_info.kernel.version }}`
 - **Machine:** `{{ system_info.kernel.machine }}`
 - **Platform:** `{{ system_info.kernel.platform }}`
 
-### 🐧 Dağıtım Bilgileri
+###  Dağıtım Bilgileri
 {% if system_info.distro %}
 {% for key, value in system_info.distro.items() %}
 - **{{ key.title() }}:** {{ value }}
 {% endfor %}
 {% endif %}
 
-### 🔒 Güvenlik Bilgileri
+###  Güvenlik Bilgileri
 - **Kullanıcı:** {{ system_info.security.user.username }}
 - **Gruplar:** {{ system_info.security.user.groups }}
 - **Sudo Erişimi:** {% if 'sudo' in system_info.security.sudo %}✅ Var{% else %}❌ Yok{% endif %}
 
 ---
 
-## 🎯 Bulunan Exploitler ({{ exploits|length }})
+##  Bulunan Exploitler ({{ exploits|length }})
 
 {% if exploits %}
 {% for exploit in exploits %}
@@ -285,7 +285,7 @@ class ReportGenerator:
 | Özellik | Değer |
 |---------|-------|
 | **CVE** | `{{ exploit.cve or 'N/A' }}` |
-| **Severity** | {% if exploit.severity == 'CRITICAL' %}🔴 **CRITICAL**{% elif exploit.severity == 'HIGH' %}🟠 **HIGH**{% elif exploit.severity == 'MEDIUM' %}🟡 **MEDIUM**{% else %}⚪ **LOW**{% endif %} |
+| **Severity** | {% if exploit.severity == 'CRITICAL' %} **CRITICAL**{% elif exploit.severity == 'HIGH' %} **HIGH**{% elif exploit.severity == 'MEDIUM' %} **MEDIUM**{% else %}⚪ **LOW**{% endif %} |
 | **Yıl** | {{ exploit.year or 'N/A' }} |
 | **Açıklama** | {{ exploit.description }} |
 | **Exploit URL** | {% if exploit.exploit_url and exploit.exploit_url != 'N/A' %}[Exploit Kodu]({{ exploit.exploit_url }}){% else %}N/A{% endif %} |
@@ -297,7 +297,7 @@ class ReportGenerator:
 ---
 {% endfor %}
 {% else %}
-### ✅ İyi Haber!
+###  İyi Haber!
 
 Bu sistem için potansiyel exploit bulunamadı. Sistem görece güvenli görünüyor.
 
@@ -306,18 +306,18 @@ Bu sistem için potansiyel exploit bulunamadı. Sistem görece güvenli görün�
 
 ---
 
-## 📈 Güvenlik Önerileri
+##  Güvenlik Önerileri
 
-### 🔄 Genel Öneriler
+###  Genel Öneriler
 1. **Sistem Güncellemeleri:** Düzenli olarak `apt update && apt upgrade` veya dağıtımınıza uygun komutları çalıştırın
 2. **Kernel Güncellemeleri:** Mümkün olduğunca güncel kernel versiyonunu kullanın
 3. **Güvenlik Yamaları:** Kritik güvenlik yamalarını hızlıca uygulayın
 4. **Minimal Yetki:** Gereksiz root erişimlerini sınırlayın
 
-### 🚨 Acil Önlemler
+###  Acil Önlemler
 {% set critical_exploits = exploits | selectattr("severity", "equalto", "CRITICAL") | list %}
 {% if critical_exploits %}
-**⚠️ CRITICAL seviyede {{ critical_exploits|length }} exploit bulundu!**
+** CRITICAL seviyede {{ critical_exploits|length }} exploit bulundu!**
 
 {% for exploit in critical_exploits %}
 - **{{ exploit.name }}:** {{ exploit.description }}
@@ -325,20 +325,20 @@ Bu sistem için potansiyel exploit bulunamadı. Sistem görece güvenli görün�
   - Hemen güncelleme yapın: {% if exploit.package_check %}`apt update && apt upgrade {{ exploit.package_check }}`{% else %}Kernel güncellemesi{% endif %}
 {% endfor %}
 {% else %}
-✅ Critical seviyede exploit bulunamadı.
+ Critical seviyede exploit bulunamadı.
 {% endif %}
 
 ---
 
-## ⚠️ Yasal Uyarı
+##  Yasal Uyarı
 
 Bu rapor **sadece eğitim ve güvenlik değerlendirmesi amaçlı** oluşturulmuştur.
 
-- ✅ Kendi sahip olduğunuz sistemlerde
-- ✅ Yasal penetrasyon testlerinde  
-- ✅ Eğitim laboratuvarlarında
+-  Kendi sahip olduğunuz sistemlerde
+-  Yasal penetrasyon testlerinde  
+-  Eğitim laboratuvarlarında
 
-**❌ Yasadışı kullanım kesinlikle yasaktır!**
+** Yasadışı kullanım kesinlikle yasaktır!**
 
 ---
 
