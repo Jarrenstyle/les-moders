@@ -272,7 +272,7 @@ class ReportGenerator:
 ###  Güvenlik Bilgileri
 - **Kullanıcı:** {{ system_info.security.user.username }}
 - **Gruplar:** {{ system_info.security.user.groups }}
-- **Sudo Erişimi:** {% if 'sudo' in system_info.security.sudo %}✅ Var{% else %}❌ Yok{% endif %}
+- **Sudo Erişimi:** {% if 'sudo' in system_info.security.sudo %} Var{% else %} Yok{% endif %}
 
 ---
 
