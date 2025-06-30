@@ -1,5 +1,59 @@
 # LES-Modern v3.0 - Dynamic Linux Exploit Suggester
 
+## linux-exploit-suggester-3 (v3) - Gelişmiş Sürüm
+**Based on:** linux-exploit-suggester-2 by @jondonas
+
+### Hakkında
+linux-exploit-suggester-3, @jondonas tarafından geliştirilen ve Linux çekirdek sürümlerine göre olası yerel ayrıcalık yükseltme (local privilege escalation) açıklarını listeleyen LES2 (v2) aracının **2025 yılına uyarlanmış**, daha akıllı ve genişletilebilir halidir.
+
+Bu yeni versiyon:
+- **Çekirdek + Dağıtım uyumlu** analiz yapar
+- **API üzerinden güncel CVE** ve ExploitDB verilerini çeker
+- **Paket versiyonlarını kontrol** ederek uygulama tabanlı zafiyetler de sunar
+- **JSON / HTML / Markdown** gibi raporlama çıktıları üretir
+
+### Neden v3?
+Orijinal LES2 çok güçlü bir temel sağladı, fakat günümüz güvenlik analizlerinde aşağıdaki nedenlerle yetersiz kalabiliyor:
+
+| v2 (klasik LES) | v3 (gelişmiş versiyon) |
+|-----------------|------------------------|
+| Statik exploit listesi | **Dinamik CVE + ExploitDB API desteği** |
+| Sadece kernel sürüm kontrolü | **OS bilgisi + dpkg/rpm + PoC önerisi** |
+| CLI çıktı | **JSON / HTML / renkli terminal raporu** |
+| Manuel kullanım | **Otomatik mod + modüler yapı** |
+| Perl dili | **Python 3 (modern, modüler kod)** |
+
+### Temel Özellikler
+- **Kernel + OS + Paket sürümlerine** göre öneri
+- **Exploit-DB ve CVE veritabanı** ile eşleşme
+- **2023–2025 CVE'lerine** özel filtreleme
+- **Zafiyetli paket versiyonlarına** karşı uyarı (örn. openssl, polkit, bash, sudo)
+- **JSON, Markdown ve HTML** rapor çıktısı
+- **Opsiyonel PoC test** desteği (isteğe bağlı)
+
+### Kullanım Senaryosu
+1. Kullanıcı hedef Linux sistemde **les-v3'ü** çalıştırır.
+2. Sistem bilgisi, çekirdek ve dağıtım verisi toplanır.
+3. **ExploitDB veritabanı ve CVE listesiyle** eşleştirilerek olası zafiyetler çıkarılır.
+4. Kullanıcıya **renkli terminal çıktısı + JSON/HTML raporu** sunulur.
+
+### Örnek Komutlar
+```bash
+# Temel analiz
+python3 main.py
+
+# Rapor oluşturma
+python3 main.py -o ./reports -v
+
+# Internet bağlantı testi
+python3 main.py --test
+
+# Detaylı güvenlik analizi
+python3 main.py --no-warning -v -o /tmp/security_report
+```
+
+---
+
 **Real-time Internet-based CVE and Exploit Analysis System**
 
 ## Overview
