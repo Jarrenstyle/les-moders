@@ -21,7 +21,7 @@ python3 main.py --no-warning
 python3 main.py --verbose --json-report
 ```
 
-## 🔧 Kali Linux Entegrasyonu
+##  Kali Linux Entegrasyonu
 
 ### 1. SearchSploit ile Entegrasyon
 ```bash
