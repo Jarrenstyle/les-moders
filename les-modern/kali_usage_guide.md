@@ -1,6 +1,6 @@
 # 🐲 LES-Modern Kali Linux Kullanım Kılavuzu
 
-## 🎯 Hızlı Başlangıç
+##  Hızlı Başlangıç
 
 ### Kurulum
 ```bash
@@ -81,7 +81,7 @@ cp output/* /home/kali/Documents/pentest-reports/
 # auto_recon.sh
 
 TARGET_IP=$1
-echo "🎯 Target: $TARGET_IP"
+echo " Target: $TARGET_IP"
 
 # Port taraması
 nmap -sS -O $TARGET_IP
@@ -95,18 +95,18 @@ if nmap -p 22 $TARGET_IP | grep open; then
 fi
 ```
 
-## 🎨 Çıktı Örnekleri
+##  Çıktı Örnekleri
 
 ### Terminal Çıktısı (Kali)
 ```
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃                    🐲 KALI LINUX DETECTED 🐲               ┃
+┃                     KALI LINUX DETECTED                ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-🔍 Hedef Sistem: Kali Linux 2024.1
-🔧 Kernel Versiyonu: 6.1.0-kali9-amd64
+ Hedef Sistem: Kali Linux 2024.1
+ Kernel Versiyonu: 6.1.0-kali9-amd64
 
-🎯 5 adet potansiyel exploit bulundu!
+ 5 adet potansiyel exploit bulundu!
 
 ┏━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━┓
 ┃ # ┃ Exploit            ┃ CVE           ┃ Severity ┃ Yıl ┃
@@ -118,7 +118,7 @@ fi
 │ 5 │ pwnkit             │ CVE-2021-4034 │ CRITICAL │ 2021│
 └───┴────────────────────┴───────────────┴──────────┴─────┘
 
-🔗 Exploit Linkleri:
+ Exploit Linkleri:
 1. netfilter_2024: https://github.com/Notselwyn/CVE-2024-1086
 2. overlayfs_2024: https://www.exploit-db.com/exploits/51234
 3. stackrot: https://github.com/TurtleARM/CVE-2023-3269-exploits
@@ -126,7 +126,7 @@ fi
 5. pwnkit: https://www.exploit-db.com/exploits/50689
 ```
 
-## 🔄 Workflow Entegrasyonu
+##  Workflow Entegrasyonu
 
 ### 1. Burp Suite ile
 ```bash
@@ -144,7 +144,7 @@ python3 main.py --html-report --output-dir /home/kali/zaproxy/reports/
 ```bash
 # Özel penetrasyon testi scripti
 #!/bin/bash
-echo "🚀 Starting pentest workflow..."
+echo " Starting pentest workflow..."
 
 # 1. Network discovery
 nmap -sn 192.168.1.0/24
@@ -159,7 +159,7 @@ python3 main.py --verbose --json-report
 python3 main.py --html-report --markdown-report
 ```
 
-## 📱 GUI Versiyonu (Opsiyonel)
+##  GUI Versiyonu (Opsiyonel)
 
 ### Kali Menüsü Entegrasyonu
 - **Applications** → **Exploitation Tools** → **LES-Modern**
@@ -173,7 +173,7 @@ python3 -m http.server 8080 -d output/
 firefox http://localhost:8080/les_modern_report.html
 ```
 
-## 🔒 Güvenlik Best Practices
+##  Güvenlik Best Practices
 
 ### 1. Virtual Environment Kullanımı
 ```bash
@@ -194,7 +194,7 @@ python3 main.py --verbose 2>&1 | tee /var/log/les-modern.log
 # VPN veya lab environment kullan
 ```
 
-## 🎓 Eğitim Amaçlı Kullanım
+##  Eğitim Amaçlı Kullanım
 
 ### 1. CVE Analizi
 ```bash
@@ -219,7 +219,7 @@ python3 main.py --markdown-report --output-dir /audit/reports/
 
 ---
 
-## ⚡ Hızlı Komut Referansı
+##  Hızlı Komut Referansı
 
 ```bash
 # Temel komutlar
@@ -243,4 +243,4 @@ python3 main.py --json-report --html-report --download --verbose
 
 ---
 
-🐲 **Happy Hacking on Kali Linux!** 🔥 
+ **Happy Hacking on Kali Linux!**  
